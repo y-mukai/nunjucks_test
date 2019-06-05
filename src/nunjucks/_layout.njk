@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {%- if pageTitle == "index" -%}
+    <title>{{ data.sitename }}</title>
+  {%- else -%}
+    <title>{{ pageTitle }} - {{ data.sitename }}</title>
+  {% endif %}
+</head>
+<body class="{{ pageTitle }}">
+  <div class="wrap">
+    {% include '_header.njk' -%}
+    <main>
+      {% block content %}
+      {% endblock %}
+      {% block content2 %}
+        <p>親要素のコメント</p>
+      {% endblock %}
+    </main>
+    {% include '_footer.njk' -%}
+  </div>
+</body>
+</html>

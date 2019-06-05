@@ -1,0 +1,9 @@
+{
+  "data" : {
+    "sitename" : "nunjucks_test",
+    "meta": {
+      "description" : "test site",
+      "keywords" : "test, nunjucks"
+    }
+  }
+}

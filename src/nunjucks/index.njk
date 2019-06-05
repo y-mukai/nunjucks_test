@@ -1,0 +1,33 @@
+{# 基本形は{}で囲む #}
+{# コメントアウトは#で囲む #}
+{# システムタグは%で囲む #}
+
+{# extendsでテンプレートファイルを読み込む #}
+{% extends '_layout.njk' %}
+
+{# 変数の宣言はset #}
+{% set pageTitle = 'index' %}
+{% set text = 'sample' %}
+{% set foods = ['egg', 'pork', 'meat', 'onion'] %}
+
+{% block content %}
+  <p>test</p>
+
+  {# 変数を使う時は{{}}で囲む #}
+  <p>{{text}}</p>
+  <ul>
+    {% for food in foods %}
+      <li>{{food}}</li>
+    {% else %}
+      <li>no food</li>
+    {% endfor %}
+  </ul>
+  {{ foo | title }}
+  <p>フィルターが分からない</p>
+{% endblock %}
+
+{% block content2 %}
+  {# 親要素の要素も子要素に引き継ぎたい場合、super() #}
+  {{ super() }}
+  <p>子要素のコメント</p>
+{% endblock %}
