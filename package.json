@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/y-mukai/nunjucks_test#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.27.10",
     "gulp": "^4.0.1",
     "gulp-data": "^1.3.1",
     "gulp-load-plugins": "^1.5.0",
